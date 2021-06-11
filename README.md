@@ -13,7 +13,7 @@ Programa desenvolvido com objetivo de estudo.
 
 O projeto deve possuir alguns requisitos na implementação com o objeto de aplicar os conhecimentos adquiridos durante o estudos de algumas tecnologias, padrões e frameworks.
 
-- [ ] Utilizar o GIT e Github para controle do cógido.
+- [X] Utilizar o GIT e Github para controle do cógido.
 - [ ] Possuir um menu no terminal.
 - [ ] Possuir uma API.
 - [ ] Possuir um Front-End Web.
