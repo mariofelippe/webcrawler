@@ -6,7 +6,7 @@ Programa desenvolvido com objetivo de estudo.
 
 1. Aprimorar os conhecimento em pyhton.
 2. Aplicar os conhecimentos adquiridos até o momento.
-3. Desenvoler um código organizado.
+3. Desenvolver um código organizado.
 4. Desenvolver o projeto com diretórios organizados.
 
 # Implementação 
