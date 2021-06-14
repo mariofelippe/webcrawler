@@ -23,7 +23,7 @@ class TerminalController():
                     break
                 else:
                     crawler.get_page(retorno)
-                    urls = crawler.get_urls()
+                    urls = crawler.get_urls(text=True, limpa_parametros=True)
                     url = retorno
             
             if op == '2':
@@ -35,8 +35,10 @@ class TerminalController():
                         break  
                     else:
                         crawler.get_page(retorno)
-                        urls = crawler.get_urls()
-                        url = retorno                   
+                        urls = crawler.get_urls(text=True, limpa_parametros=True)
+                        terminal.exibir_urls(urls)
+                        url = retorno  
+                                         
                 else:
                      terminal.exibir_urls(urls)
                     

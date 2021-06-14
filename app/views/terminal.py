@@ -6,21 +6,21 @@ def header(url):
     if not url:
         url = ''
     print(f'''
-          ###########################################################################
-                                           WebCrawler                    {url}
-          ###########################################################################
+          ################################################################################################
+                                                    WebCrawler                        {url}
+          ################################################################################################
           ''')
    
 def lista_opcoes(opcoes):    
       
     for op in opcoes:
-        print(f'                                {op}')
+        print(f'                                        {op}')
   
 def mensagem(msg):
     os.system('cls' if os.name == 'nt' else 'clear')
     header('')
     print(f'''          
-                                    {msg}
+                        {msg}
           
           ''')
     input_data('Aperte para continuar...')
@@ -35,7 +35,7 @@ def menu_princial(url):
     
   
     header(url)
-    opcoes = ['1 - Obter informações da URL.','2 - Listar todas os links.','99 - sair']    
+    opcoes = ['1 - Adicionar URL.','2 - Listar todos os links.','99 - sair']    
     lista_opcoes(opcoes)
     
     op = input('''\n          Digite a opção: ''')
@@ -45,17 +45,68 @@ def menu_princial(url):
 def opcao_1():
     
     header('')
+    
     lista_opcoes(['99 - Sair.'])
     url = input_data('Informe a URL:')
     return url
 
 
 def exibir_urls(urls):
-    header('')
-    for url in urls:
-        print(f'            {url}')
-    input_data('Aperte para continuar...')
     
+    
+    header('')    
+    quantidade = len(urls)
+    
+    # Valida a quantidade de peginas para o controle da exibição.
+    
+    if (quantidade % 20) == 0:
+        qtd_paginas = int(quantidade/20) 
+    else:
+        qtd_paginas = int(quantidade/20) + 1
+        
+    # Controle de paginação.
+    inicial = 0
+    final = 20
+    
+    op = input_data(f' {quantidade} de links encontrados. Exibir na tela? (S - Sim)')
+    
+    if op.lower() == 's':
+        exibir = True
+    else:
+        exibir = False
+        
+    while exibir:
+        
+        header('')
+       
+    
+        for i in range(inicial, final):
+            
+            if i >= quantidade:
+                continue
+            print('                 {} - {} -> {}'.format(i+1,urls[i]['text'], urls[i]['href']))
+        
+        
+        print(f'''
+                                {quantidade} links localizados.
+              ''')
+        op = input_data('Aperte Enter para próxima página ou 99 para sair.')
+        if op == '99':
+            break
+        else:
+            inicial = final
+            final = inicial + 20
+            if final > quantidade:
+                mensagem('Todos os dados já foram exibidos!')
+                break
+    
+        
+    '''
+    for url in urls:
+        print('            {} -> {}'.format(url['text'], url['href']))
+    input_data('Aperte para continuar...')
+    '''
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
+    
     

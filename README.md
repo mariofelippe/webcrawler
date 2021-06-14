@@ -18,3 +18,4 @@ O projeto deve possuir alguns requisitos na implementação com o objeto de apli
 - [ ] Possuir uma API.
 - [ ] Possuir um Front-End Web.
 - [ ] Utilizar Expressões regulares no projeto.
+- [ ] Trabalhar com manipulação de arquivo.
