@@ -56,14 +56,7 @@ def exibir_urls(urls):
     
     header('')    
     quantidade = len(urls)
-    
-    # Valida a quantidade de peginas para o controle da exibição.
-    
-    if (quantidade % 20) == 0:
-        qtd_paginas = int(quantidade/20) 
-    else:
-        qtd_paginas = int(quantidade/20) + 1
-        
+           
     # Controle de paginação.
     inicial = 0
     final = 20
@@ -79,17 +72,17 @@ def exibir_urls(urls):
         
         header('')
        
-    
         for i in range(inicial, final):
             
             if i >= quantidade:
                 continue
+            
             print('                 {} - {} -> {}'.format(i+1,urls[i]['text'], urls[i]['href']))
-        
         
         print(f'''
                                 {quantidade} links localizados.
               ''')
+        
         op = input_data('Aperte Enter para próxima página ou 99 para sair.')
         if op == '99':
             break
@@ -101,11 +94,6 @@ def exibir_urls(urls):
                 break
     
         
-    '''
-    for url in urls:
-        print('            {} -> {}'.format(url['text'], url['href']))
-    input_data('Aperte para continuar...')
-    '''
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
     
