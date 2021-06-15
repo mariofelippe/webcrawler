@@ -24,6 +24,7 @@ class Crawler():
         except Exception as erro:
             print(f'Erro ao tentar conectar \"{self.__url}\"! {erro}')
             
+            
 
     def __format_html(self):
         """

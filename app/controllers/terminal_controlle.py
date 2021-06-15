@@ -3,11 +3,13 @@ from app.classes.crawler import Crawler
 
 class TerminalController():
     
-    def init(self):
+    def main(self):
         
         crawler = Crawler()
         url = None
         while True:
+            
+            
             
             op = terminal.menu_princial(url)
             if op == '99':
@@ -16,8 +18,11 @@ class TerminalController():
                 break
             
             if op == '1':
-                retorno = terminal.opcao_1()
-                if retorno == '99':
+                urls = None
+                retorno = terminal.adicionar_url()
+                if not retorno:
+                    terminal.mensagem('Informação inválida!')
+                elif retorno == '99':
                     terminal.mensagem('Fechando o programa...')
                     terminal.limpar_tela()
                     break
@@ -31,11 +36,12 @@ class TerminalController():
                         
                     retorno = terminal.input_data('Exportar dados (S - Sim)? ')
                     if retorno.lower() == 's':
-                        exportar_dados(urls)
+                        self.exportar_dados(urls)
             
             if op == '2':
+                
                 if not url:
-                    retorno = terminal.opcao_1()
+                    retorno = terminal.adicionar_url()
                     url = retorno
                     if retorno == '99':
                         terminal.mensagem('Fechando o programa...')
@@ -50,30 +56,34 @@ class TerminalController():
                         
                         retorno = terminal.salvar_arquivo()
                         if retorno.lower() == 's':
-                            exportar_dados(urls)
-                          
-                                         
+                            self.exportar_dados(urls)
+                                                                   
                 else:
-                     crawler.get_page(url)
-                     urls = crawler.get_urls(text=True, limpa_parametros=True)
+                     #crawler.get_page(url)
+                     #urls = crawler.get_urls(text=True, limpa_parametros=True)
+                     
                      terminal.exibir_urls(urls, url)
                      retorno = terminal.salvar_arquivo()
                      if retorno.lower() == 's':
-                         exportar_dados(urls)
+                         self.exportar_dados(urls)
                     
             
             if op not in ['1','2','99']:
                 terminal.mensagem('Opção inválida!')        
            
 
-def exportar_dados(urls):
+    def exportar_dados(self,urls):
+        
+        
+        nome_arquivo = terminal.input_data('Informe o nome do arquivo:').strip()
+        
+        try:
+            arquivo = open('tmp\\{}.csv'.format(nome_arquivo),'w',encoding='utf')
+            for linha in urls:
+                arquivo.write('{};{}\n'.format(str(linha['text'].replace(';',',')),linha['href']))
+            arquivo.close()
+        except Exception as erro:
+            terminal.mensagem(f'Erro ao salvar arquivo. {erro}')    
     
-    
-    nome_arquivo = terminal.input_data('Informe o nome do arquivo:').strip()
-    arquivo = open('tmp\\{}.csv'.format(nome_arquivo),'w')
-    try:
-        for linha in urls:
-            arquivo.write('{};{}\n'.format(linha['text'].replace(';',','),linha['href']))
-    except Exception as erro:
-        terminal.mensagem('Erro ao salvar arquivo.')    
-    arquivo.close()
+    def init(self):
+        self.main()

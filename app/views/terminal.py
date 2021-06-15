@@ -18,49 +18,55 @@ def header(url):
 def lista_opcoes(opcoes):    
       
     for op in opcoes:
-        print(f'                                        {op}')
+        print(f'''                                               {op}''')
   
 def mensagem(msg):
     os.system('cls' if os.name == 'nt' else 'clear')
     header('')
     input(f'''          
-                                    {msg}
+                                            {msg}
           
                         
-                                    Aperte para continuar''')
+                                        Aperte para continuar...''')
     
     
 
 def input_data(msg):
     
-    entrada = input(f'\n                                {msg} ')
+    entrada = input(f'\n                                          {msg} ')
     return entrada
 
 def menu_princial(url):
     
   
     header(url)
-    opcoes = ['1 - Adicionar URL.','2 - Listar todos os links.','99 - sair']    
+    opcoes = ['1 - Adicionar/Alterar URL.','2 - Listar todos os links.','99 - sair']    
     lista_opcoes(opcoes)
     
     op = input('''\n          Digite a opção: ''')
     return op
 
 
-def opcao_1():
-    
-    header('')
-    lista_opcoes(['99 - Sair.'])
-    url = input_data('Informe a URL:')
-    return url
+def adicionar_url():
+    url = None
+    while not url:
+        header('')
+        lista_opcoes(['99 - Sair.'])
+        url = input_data('Informe a URL:')
+        if url:
+            return url
+
+        mensagem('Favor informação a URL!')
 
 
 def exibir_urls(urls, url):
     
     
-    header(url)    
-    quantidade = len(urls)
-           
+    header(url)
+    if urls:    
+        quantidade = len(urls)
+    else:
+        quantidade = 0   
     # Controle de paginação.
     inicial = 0
     final = 20
