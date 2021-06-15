@@ -3,13 +3,17 @@ import time
 
 def header(url):
     limpar_tela()
-    if not url:
-        url = ''
+    
     print(f'''
           ################################################################################################
-                                                    WebCrawler                        {url}
+                                                    WebCrawler                        
           ################################################################################################
           ''')
+    
+    if url:
+        print(f'''                                          URL: {url}
+              ''')
+    
    
 def lista_opcoes(opcoes):    
       
@@ -19,11 +23,12 @@ def lista_opcoes(opcoes):
 def mensagem(msg):
     os.system('cls' if os.name == 'nt' else 'clear')
     header('')
-    print(f'''          
-                        {msg}
+    input(f'''          
+                                    {msg}
           
-          ''')
-    input_data('Aperte para continuar...')
+                        
+                                    Aperte para continuar''')
+    
     
 
 def input_data(msg):
@@ -45,22 +50,21 @@ def menu_princial(url):
 def opcao_1():
     
     header('')
-    
     lista_opcoes(['99 - Sair.'])
     url = input_data('Informe a URL:')
     return url
 
 
-def exibir_urls(urls):
+def exibir_urls(urls, url):
     
     
-    header('')    
+    header(url)    
     quantidade = len(urls)
            
     # Controle de paginação.
     inicial = 0
     final = 20
-    
+     
     op = input_data(f' {quantidade} de links encontrados. Exibir na tela? (S - Sim)')
     
     if op.lower() == 's':
@@ -70,8 +74,8 @@ def exibir_urls(urls):
         
     while exibir:
         
-        header('')
-       
+        header(url)
+        
         for i in range(inicial, final):
             
             if i >= quantidade:
@@ -93,6 +97,10 @@ def exibir_urls(urls):
                 mensagem('Todos os dados já foram exibidos!')
                 break
     
+def salvar_arquivo():
+    header('')
+    op = input_data('Exportar dados (S - Sim)? ')
+    return op
         
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
