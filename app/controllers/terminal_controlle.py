@@ -24,7 +24,12 @@ class TerminalController():
                 else:
                     crawler.get_page(retorno)
                     urls = crawler.get_urls(text=True, limpa_parametros=True)
+                    
                     url = retorno
+                        
+                    retorno = terminal.input_data('Exportar dados (S - Sim)? ')
+                    if retorno.lower() == 's':
+                        exportar_dados(urls)
             
             if op == '2':
                 if not url:
@@ -37,10 +42,27 @@ class TerminalController():
                         crawler.get_page(retorno)
                         urls = crawler.get_urls(text=True, limpa_parametros=True)
                         terminal.exibir_urls(urls)
-                        url = retorno  
+                        url = retorno
+                        
+                        retorno = terminal.input_data('Exportar dados (S - Sim)? ')
+                        if retorno.lower() == 's':
+                            exportar_dados(urls)
+                          
                                          
                 else:
+                     crawler.get_page(url)
+                     urls = crawler.get_urls(text=True, limpa_parametros=True)
                      terminal.exibir_urls(urls)
                     
            
 
+def exportar_dados(urls):
+    
+    terminal.mensagem('Salvar CSV.')
+    nome_arquivo = terminal.input_data('Informe o nome do arquivo:').strip()
+    arquivo = open('tmp\\{}.csv'.format(nome_arquivo),'w')
+    
+    for linha in urls:
+        arquivo.write('{};{}\n'.format(linha['text'].replace(';',','),linha['href']))
+        
+    arquivo.close()
