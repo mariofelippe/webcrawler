@@ -23,6 +23,7 @@ class Crawler():
             self.__format_html()
         except Exception as erro:
             print(f'Erro ao tentar conectar \"{self.__url}\"! {erro}')
+            self.__html = ''
             
             
 
@@ -35,9 +36,9 @@ class Crawler():
         """
         
         try:
-            self.html = self.__req.text 
-            self.html = BeautifulSoup(self.html, 'html.parser')
-            return self.html
+            self.__html = self.__req.text 
+            self.__html = BeautifulSoup(self.__html, 'html.parser')
+            return self.__html
         except Exception as erro:
             print(f'Erro ao tentar criar o html! {erro}')
             
@@ -57,7 +58,7 @@ class Crawler():
         """
         
         try:
-            self.__urls = self.html.find_all('a')
+            self.__urls = self.__html.find_all('a')
             lista_urls = []
             
             for url in self.__urls:
@@ -116,3 +117,85 @@ class Crawler():
         self.__dominio = f'{self.__protocolo}//{self.__dominio}'
         
         return self.__dominio
+    
+    
+    def get_meta(self):
+        """ Pega as tag meta de uma página.
+        Returns:
+            [dic]: Dados das metas da página.
+        """
+        dados = dict()
+        metas = self.__html.find_all('meta')
+                
+        lista_nome = []
+        lista_property = []
+        http_equiv = []
+               
+        
+        for meta in metas:
+            
+            charset =  meta.get('charset')
+            content = meta.get('content')
+            name = meta.get('name')
+            prop = meta.get('property')
+            valor_id = meta.get('id')
+            equival = meta.get('http-equiv')
+            
+            get = False
+                     
+            if charset:                
+                char = charset
+                get = True
+            
+            if name:
+                lista_nome.append({name : content})
+                get = True
+            
+            if prop:
+                lista_property.append({prop : content})
+                get = True
+                
+            if equival:
+                http_equiv.append({equival : content})                
+                get = True
+                           
+        dados['charset'] = char
+        dados['name'] = lista_nome
+        dados['property'] = lista_property
+        dados['http-equiv'] = http_equiv
+        
+        return dados
+            
+           
+    def get_info(self):
+        
+        """ Pega as info básicas da página.
+        Returns:
+            [dic]: Dados básicos de página. (nome, título, descrição)
+        """       
+        
+        data = self.get_meta()
+        info = dict()   
+               
+        for dado in data['name']:
+            
+            if 'title' in dado.keys():
+                info['title'] = dado['title']
+                       
+            if 'description' in dado.keys():
+                info['description'] = dado['description']
+                    
+        for dado in data['property']:
+            
+            if 'og:title' in dado.keys():
+                info['title'] = dado['og:title']
+                
+            if 'og:site_name' in dado.keys():
+                info['site_name'] = dado['og:site_name']
+            
+            if 'og:url' in dado.keys():
+                info['url'] = dado['og:url']
+                  
+        return(info)
+        
+
