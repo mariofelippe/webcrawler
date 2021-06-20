@@ -125,12 +125,14 @@ class Crawler():
             [dic]: Dados das metas da página.
         """
         dados = dict()
-        metas = self.__html.find_all('meta')
-                
+        if self.__html:
+            metas = self.__html.find_all('meta')
+        else:
+            return None     
         lista_nome = []
         lista_property = []
         http_equiv = []
-               
+        char = ''   
         
         for meta in metas:
             
@@ -175,7 +177,10 @@ class Crawler():
         """       
         
         data = self.get_meta()
-        info = dict()   
+        info = dict() 
+        
+        if not data:
+              return None
                
         for dado in data['name']:
             

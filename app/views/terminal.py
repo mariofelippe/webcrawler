@@ -112,3 +112,28 @@ def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
     
     
+def exibir_info(dados):
+    
+    title = ''
+    description = ''
+    site = ''
+    
+    if dados:
+    
+        if 'title' in dados.keys():
+            title = dados['title']
+            
+        if 'description' in dados.keys():
+            description = dados['description']
+        
+    
+    header('')
+    print(f'''         
+                                            
+                      {title}
+                      
+                    {description}     
+          '''            
+    )
+    
+    input_data('Aperte para continuar...')
