@@ -61,12 +61,23 @@ class Crawler():
             self.__urls = self.__html.find_all('a')
             lista_urls = []
             
+            
+            
             for url in self.__urls:
                 
                 # Pega a propriedade href e o texto da tag "a".
                 self.__href = url.get('href')
                 self.__text = url.get_text().strip()
+                self.__title = url.get('title')
                 
+                if self.__href == None:
+                   continue
+               
+                if self.__text == '':
+                    if self.__title:
+                        self.__text = self.__title
+                    else:
+                        self.__text = ''
                 # Limpa os parametros passados pela url caso limpa_parametros=True.
                 if limpa_parametros:
                     self.__href = self.__href.split('?')[0]

@@ -118,8 +118,8 @@ CBN   ------>  https://cbn.globoradio.globo.com
 Rádio Globo   ------>  https://radioglobo.globo.com/
 Princípios Editoriais   ------>  http://g1.globo.com/principios-editoriais-do-grupo-globo.html
 Grupo Globo   ------>  http://grupoglobo.globo.com/
-   ------>  https://www.globo.com/
-   ------>  https://www.globo.com/
+globo.com - Absolutamente tudo sobre notícias, esportes e entretenimento   ------>  https://www.globo.com/
+globo.com - Absolutamente tudo sobre notícias, esportes e entretenimento   ------>  https://www.globo.com/
 g1   ------>  https://g1.globo.com/
 ge   ------>  https://globoesporte.globo.com/
 gshow   ------>  https://gshow.globo.com/
@@ -132,60 +132,61 @@ globomail pro   ------>  https://login.globo.com/login/1
    ------>  http://globo.com#
    ------>  https://minhaconta.globo.com
    ------>  http://globo.com#
-Brasileirão         Bahia recebe o Corinthians, SIGA LANCES   ------>  https://ge.globo.com/ba/futebol/brasileirao-serie-a/jogo/20-06-2021/bahia-corinthians.ghtml
-Inter abre contra o Ceará no Beira-Rio, SIGA TR   ------>  https://ge.globo.com/rs/futebol/brasileirao-serie-a/jogo/20-06-2021/internacional-ceara.ghtml
-Cartola do Inter comenta reforços para Aguirre   ------>  https://ge.globo.com/rs/futebol/times/internacional/noticia/presidente-do-inter-fala-sobre-reforcos-para-aguirre-e-espera-em-breve-resposta-por-zagueiro.ghtml
-Náutico encara o Bota pela Série B, acompanhe TR   ------>  https://ge.globo.com/pe/futebol/brasileirao-serie-b/jogo/20-06-2021/nautico-botafogo.ghtml
-Saiba a classificação dos times da Série B   ------>  https://ge.globo.com/futebol/brasileirao-serie-b/
-Palmeiras vira sobre América-MG e entra no G-4   ------>  https://ge.globo.com/sp/futebol/brasileirao-serie-a/jogo/20-06-2021/palmeiras-america-mg.ghtml
-Acompanhe o vai e vem dos clubes na Série A   ------>  https://ge.globo.com/futebol/brasileirao-serie-a/
+BRASILEIRÃO         Bahia recebe o Corinthians, SIGA LANCES   ------>  https://ge.globo.com/ba/futebol/brasileirao-serie-a/jogo/20-06-2021/bahia-corinthians.ghtml
+Ceará deixa tudo igual contra Inter no Beira-Rio, SIGA   ------>  https://ge.globo.com/rs/futebol/brasileirao-serie-a/jogo/20-06-2021/internacional-ceara.ghtml
+Botafogo empata com o Náutico na Série B, lances   ------>  https://ge.globo.com/pe/futebol/brasileirao-serie-b/jogo/20-06-2021/nautico-botafogo.ghtml
+Santos recebe o São Paulo na Vila Belmiro, pré-jogo   ------>  https://ge.globo.com/sp/santos-e-regiao/futebol/brasileirao-serie-a/jogo/20-06-2021/santos-sao-paulo.ghtml
+Invicto, Fortaleza enfrenta o Flu no Castelão, pré-jogo   ------>  https://ge.globo.com/ce/futebol/brasileirao-serie-a/jogo/20-06-2021/fortaleza-fluminense.ghtml
+Siga Pré-jogo: Athletico-PR pega o Atlético-GO   ------>  https://ge.globo.com/pr/futebol/brasileirao-serie-a/jogo/20-06-2021/atletico-pr-atletico-go.ghtml
+Venezuela pega o Equador na Copa América, SIGA   ------>  https://ge.globo.com/futebol/copa-america/jogo/20-06-2021/venezuela-equador.ghtml
 'Marco sombrio': como imprensa estrangeira repercutiu a tragédia   ------>  https://g1.globo.com/mundo/noticia/2021/06/20/marco-sombrio-de-500-mil-mortes-e-protestos-contra-o-presidente-a-tragedia-brasileira-na-imprensa-internacional.ghtml
-Pazuello fez queixa ao diretor da OMS por não ter vacina, blog   ------>  https://blogs.oglobo.globo.com/lauro-jardim/post/brasil-tem-dinheiro-mas-nao-tem-vacina-o-lamento-de-pazuello-ao-diretor-geral-da-oms.html
+6 brasileiros salvos pela vacina   ------>  https://oglobo.globo.com/sociedade/saude/salvos-pela-vacina-conheca-historias-de-quem-teve-covid-19-sobreviveu-gracas-aos-imunizantes-25068619
+Pfizer entrega 842 mil doses via Covax   ------>  https://g1.globo.com/sp/campinas-regiao/noticia/2021/06/20/covid-19-pfizer-entrega-ao-brasil-842-mil-doses-da-vacina-pelo-consorcio-covax-facility.ghtml
 Fake news atrapalham vacinação indígena na região amazônica   ------>  https://g1.globo.com/bemestar/vacina/noticia/2021/06/20/62percent-dos-indigenas-na-amazonia-estao-vacinados-contra-covid-ac-e-pa-tem-aldeias-com-baixa-adesao.ghtml
-Seis brasileiros salvos após a vacina   ------>  https://oglobo.globo.com/sociedade/saude/salvos-pela-vacina-conheca-historias-de-quem-teve-covid-19-sobreviveu-gracas-aos-imunizantes-25068619
+Pazuello fez queixa ao diretor da OMS por não ter vacina, blog   ------>  https://blogs.oglobo.globo.com/lauro-jardim/post/brasil-tem-dinheiro-mas-nao-tem-vacina-o-lamento-de-pazuello-ao-diretor-geral-da-oms.html
+Técnicos do 'TVK' ficam surpresos com tio famoso de Henrique   ------>  https://gshow.globo.com/realities/the-voice-kids/noticia/the-voice-kids-tecnicos-ficam-surpresos-com-parentesco-famoso-de-participante-confira.ghtml
 Gagliasso celebra 8 anos de Titi: 'Vida'   ------>  https://revistaglamour.globo.com/Celebridades/noticia/2021/06/bruno-gagliasso-faz-homenagem-filha-voce-e-vida.html
 Em Portugal, Ewbank mostra mesa de doces para a filha   ------>  https://revistaglamour.globo.com/Celebridades/noticia/2021/06/giovanna-ewbank-mostra-detalhes-da-festinha-de-8-anos-da-filha-titi.html
-'The Voice Kids': as apresentações da 3ª Audição às Cegas   ------>  https://gshow.globo.com/realities/the-voice-kids/2021/noticia/the-voice-kids-acompanhe-as-apresentacoes-do-terceiro-dia-de-audicoes-as-cegas.ghtml
 Borat de 'Amor & Sexo' tem alta após passar por nova cirurgia   ------>  https://revistaquem.globo.com/QUEM-News/noticia/2021/06/bruno-miranda-o-borat-de-amor-sexo-tem-alta-hospitalar-apos-nova-cirurgia.html
 No Brasil e no mundo   ------>  https://globoesporte.globo.com/
 Após críticas de Messi, campo pode ter melhoria   ------>  https://ge.globo.com/futebol/copa-america/noticia/noticia-copa-america-gramado-estadio-nilton-santos-conmebol.ghtml
 Uefa investiga racismo e homofobia sobre Hungria   ------>  https://ge.globo.com/futebol/eurocopa/noticia/uefa-abre-investigacoes-contra-abusos-racistas-e-homofobicos-nos-jogos-da-hungria-na-euro.ghtml
 Cartoleiro PRO tem mais ligas e conteúdo exclusivo   ------>  https://cartolafc.globo.com/assine.html
-Com medo de Lázaro, família com grávida dorme dentro de carro   ------>  https://g1.globo.com/go/goias/noticia/2021/06/20/com-medo-de-lazaro-familia-com-gravida-dorme-dentro-de-carro-em-frente-a-sede-da-forca-tarefa-em-cocalzinho-de-goias.ghtml
+Vídeo: navio colide e destrói píer de travessia de balsas no litoral de SP   ------>  https://g1.globo.com/sp/santos-regiao/noticia/2021/06/20/navio-colide-e-destroi-pier-de-travessia-de-balsas-no-litoral-de-sp-video.ghtml
 ‘Estou indo te pegar’, posta deputada com fuzil em helicóptero ao citar Lázaro   ------>  https://blogs.oglobo.globo.com/sonar-a-escuta-das-redes/post/estou-indo-ai-te-pegar-portando-fuzil-em-helicoptero-deputada-federal-publica-caca-lazaro-barbosa-nas-redes.html
 Bebê nasce dentro do carro em avenida de Foz do Iguaçu, vídeo   ------>  https://g1.globo.com/pr/oeste-sudoeste/noticia/2021/06/20/bebe-nasce-dentro-do-carro-em-avenida-de-foz-do-iguacu-foi-muito-emocionante-diz-mae.ghtml
 Presa por matar e esquartejar marido, Elize Matsunaga volta aos tribunais pela filha   ------>  https://oglobo.globo.com/brasil/presa-por-esquartejar-marido-elize-matsunaga-volta-aos-tribunais-em-disputa-pela-filha-25069415
-A história dos filhos roubados das mães pela ditadura de Pinochet   ------>  https://g1.globo.com/mundo/noticia/2021/06/20/fui-arrancada-dos-bracos-de-minha-mae-os-bebes-roubados-na-ditadura-de-pinochet-no-chile.ghtml
+Jornalista de 35 anos morre por complicações da Covid em Sorocaba   ------>  https://g1.globo.com/sp/sorocaba-jundiai/noticia/2021/06/20/jornalista-de-35-anos-morre-por-complicacoes-da-covid-19-em-sorocaba.ghtml
 Streamer é desligado de equipe após comentários transfóbicos em live   ------>  https://www.techtudo.com.br/noticias/2021/06/buxexa-e-desligado-do-fluxo-apos-comentarios-transfobicos-em-live-esports.ghtml
-Miliciano Ecko usava empresas, farmácias e compra de cavalos para 'lavar' dinheiro   ------>  https://extra.globo.com/casos-de-policia/miliciano-ecko-usava-empresas-farmacias-compra-de-cavalos-para-lavar-dinheiro-que-lucrava-com-crime-25069118.html
-Acidente nos EUA com 18 veículos mata 9 crianças e 1 adulto   ------>  https://g1.globo.com/mundo/noticia/2021/06/20/acidente-de-carro-nos-estados-unidos-deixa-mortos.ghtml
-Navio colide e destrói píer de travessia de balsas em SP, vídeo   ------>  https://g1.globo.com/sp/santos-regiao/noticia/2021/06/20/navio-colide-e-destroi-pier-de-travessia-de-balsas-no-litoral-de-sp-video.ghtml
+Acidente nos Estados Unidos com 18 veículos mata nove crianças e um adulto   ------>  https://g1.globo.com/mundo/noticia/2021/06/20/acidente-de-carro-nos-estados-unidos-deixa-mortos.ghtml
+A história dos filhos roubados das mães pela ditadura de Pinochet   ------>  https://g1.globo.com/mundo/noticia/2021/06/20/fui-arrancada-dos-bracos-de-minha-mae-os-bebes-roubados-na-ditadura-de-pinochet-no-chile.ghtml
 Youtubers jogam Toyota Hilux a 3 mil metros de altura para 'testar', vídeo   ------>  https://autoesporte.globo.com/curiosidades/noticia/2021/06/video-youtubers-jogam-toyota-hilux-a-3-mil-metros-de-altura-para-testar-durabilidade-da-picape.ghtml
+Príncipe William mostra foto com os filhos e celebra Dia dos Pais no R. Unido   ------>  https://revistacrescer.globo.com/Educacao-Comportamento/noticia/2021/06/familia-real-compartilha-foto-de-principe-william-com-os-filhos-para-celebrar-o-dia-dos-pais-no-reino-unido.html
 PODCASTS DO G1   G1 OUVIU #146   A cantora trans Urias e o pop eletrônico 'diferentão'   ------>  https://g1.globo.com/podcast/g1-ouviu/noticia/2021/06/20/g1-ouviu-146-urias-e-o-pop-eletronico-diferentao.ghtml
 Mais podcasts do G1 ›   ------>  https://g1.globo.com/podcast/
 mais notícias ›   ------>  https://g1.globo.com/
-Classificadas, Brasil e Turquia fazem último jogo da 1ª fase da Liga, SIGA   ------>  https://ge.globo.com/volei/ao-vivo/liga-das-nacoes-brasil-x-turquia.ghtml
+Classificado, Brasil faz 2 sets a 0 contra a Turquia na Liga, SIGA   ------>  https://ge.globo.com/volei/ao-vivo/liga-das-nacoes-brasil-x-turquia.ghtml
 Verstappen provoca e diz que ultrapassagem contra Hamilton foi fácil   ------>  https://ge.globo.com/motor/formula-1/noticia/verstappen-diz-que-ultrapassagem-da-vitoria-no-gp-da-franca-foi-facil.ghtml
-Ex-Corinthians e Barça, Paulinho rescinde e fica livre no mercado   ------>  https://ge.globo.com/futebol/futebol-internacional/noticia/ex-corinthians-e-barcelona-paulinho-rescinde-com-guangzhou-e-fica-livre-no-mercado.ghtml
+Messi cumpre promessa e autografa tatuagem de fã brasileiro em Brasília   ------>  https://ge.globo.com/futebol/copa-america/noticia/messi-se-encanta-com-homenagem-e-cumpre-promessa-de-autografar-tatuagem-de-fa-brasileiro.ghtml
 Cristiano Ronaldo faz apelo após derrota na Eurocopa: 'Acreditem tanto quanto nós'   ------>  https://ge.globo.com/futebol/eurocopa/noticia/acreditem-tanto-como-nos-cristiano-ronaldo-faz-apelo-a-torcida-apos-derrota-de-portugal-para-alemanha.ghtml
-Ex-atacante da Ponte Preta, Lucas Pereira morre aos 39 anos com Covid   ------>  https://ge.globo.com/sp/campinas-e-regiao/futebol/times/ponte-preta/noticia/ex-atacante-da-ponte-preta-lucas-pereira-morre-aos-39-anos-por-complicacoes-da-covid-19.ghtml
-Vojvoda na intimidade: técnico sensação no Fortaleza relata adaptação   ------>  https://ge.globo.com/ce/futebol/times/fortaleza/noticia/vojvoda-na-intimidade-e-no-futebol-tecnico-sensacao-no-fortaleza-fala-em-entrevista-exclusiva.ghtml
-Série revisita ascensão e queda de João Havelange, o maior cartola brasileiro   ------>  https://blogs.oglobo.globo.com/lauro-jardim/post/serie-revisita-ascensao-e-queda-do-maior-cartola-do-futebol-brasileiro.html
-Blindado estreia com nocaute no UFC, e Virna se destaca no preliminar   ------>  https://ge.globo.com/combate/noticia/videos-do-ufc-bruno-blindado-estreia-com-nocaute-e-virna-se-destaca-no-card-preliminar.ghtml
+Ex-Corinthians e Barça, Paulinho rescinde e fica livre no mercado   ------>  https://ge.globo.com/futebol/futebol-internacional/noticia/ex-corinthians-e-barcelona-paulinho-rescinde-com-guangzhou-e-fica-livre-no-mercado.ghtml
+Usain Bolt posta foto e revela ser pai de gêmeos no Dia dos Pais   ------>  https://ge.globo.com/olimpiadas/noticia/usain-bolt-posta-foto-e-apresenta-gemeos-no-dia-dos-pais.ghtml
+Vídeos do UFC: Bruno Blindado estreia com nocaute, e Virna se destaca no card preliminar   ------>  https://ge.globo.com/combate/noticia/videos-do-ufc-bruno-blindado-estreia-com-nocaute-e-virna-se-destaca-no-card-preliminar.ghtml
+SIGA: Suns e Clippers fazem o jogo 1 da final da conferência oeste da NBA   ------>  https://ge.globo.com/basquete/nba/ao-vivo/playoffs-da-nba-phoenix-suns-x-los-angeles-clippers.ghtml
 ACOMPANHE Surf Ranch Pro, sexta etapa do circuito Mundial de Surfe   ------>  https://ge.globo.com/radicais/surfe/mundial-de-surfe/ao-vivo/mundial-de-surfe-surf-ranch-pro.ghtml
 Atleta olímpico de Uganda é vetado em Tóquio após positivar para Covid   ------>  https://ge.globo.com/olimpiadas/noticia/membro-da-equipe-olimpica-de-uganda-e-vetado-de-entrar-em-toquio-apos-positivar-para-covid.ghtml
 Podcasts do GE   GRINGOLÂNDIA   Alemanha complica Portugal no grupo da morte, e França e Espanha tropeçam   ------>  https://interativos.globoesporte.globo.com/podcasts/programa/gringolandia/episodio/pocket-euro-09-alemanha-complica-portugal-no-grupo-da-morte-e-franca-e-espanha-tropecam/
 Mais podcasts do GE ›   ------>  https://interativos.globoesporte.globo.com/podcasts/
 mais esportes ›   ------>  https://globoesporte.globo.com/
 Deborah Secco posta férias nas Maldivas com Maria Flor e Hugo   ------>  https://revistaglamour.globo.com/Celebridades/noticia/2021/06/deborah-secco-curte-maldivas-coma-familia.html
-Luciana Gimenez mostra encontro de Lucas com o pai Mick Jagger   ------>  https://casavogue.globo.com/Curiosidades/noticia/2021/06/luciana-gimenez-posta-foto-com-lucas-e-mick-jagger-em-comoracao-ao-dia-dos-pais.html
+Luciana Gimenez mostra encontro de Lucas com o pai Mick Jagger   ------>  https://revistaglamour.globo.com/Celebridades/noticia/2021/06/luciana-gimenez-mostra-registros-raros-ao-lado-de-mick-jagger-e-parabeniza-o-ex-feliz-dia-dos-pais.html
 Sarah Andrade mostra resultado de lipo, compare antes e depois do BBB   ------>  https://revistaglamour.globo.com/Celebridades/noticia/2021/06/sarah-andrade-mostra-resultado-de-lipo.html
 Milionário, ex-BBB Gil do Vigor se diz feliz na carreira, mas busca 'cachorrada com amor'   ------>  https://extra.globo.com/tv-e-lazer/milionario-gil-do-vigor-se-diz-feliz-na-carreira-na-fe-mas-ainda-procura-da-felicidade-completa-quero-cachorrada-com-amor-25066395.html
-Santoni sobre namorado após cenas de sexo a três: 'Animado, não teve ciúme'   ------>  https://kogut.oglobo.globo.com/noticias-da-tv/noticia/2021/06/com-cenas-de-sexo-tres-em-serie-isabella-santoni-fala-sobre-reacao-do-namorado-ficou-animado-nao-teve-ciume.html
+Branca Feres conta que sentiu azia como a irmã grávida, Bia, e cita conexão   ------>  https://revistamarieclaire.globo.com/Celebridades/noticia/2021/06/gravida-bia-feres-fala-sobre-conexao-com-irma-gemea-durante-gestacao.html
 Ana Paula Siebert encanta fãs ao mostrar alegria de Vicky no mar   ------>  https://revistaquem.globo.com/QUEM-News/noticia/2021/06/ana-paula-siebert-encanta-fas-ao-mostrar-alegria-de-vicky-no-mar.html
 Paula Fernandes nega plástica e revela congelamento de óvulos: 'Tempo para decidir'   ------>  https://gshow.globo.com/Famosos/noticia/paula-fernandes-nega-plastica-e-revela-congelamento-de-ovulos.ghtml
 Anitta atualiza marquinha de biquini em viagem à República Dominicana   ------>  https://revistaquem.globo.com/QUEM-News/noticia/2021/06/anitta-atualiza-marquinha-de-biquini-em-viagem-republica-dominicana.html
-Gloria Groove revê passado na periferia e projeta: 'Por mais 'Glorias' tendo espaço'   ------>  https://extra.globo.com/famosos/gloria-groove-revisita-passado-na-periferia-em-novo-trabalho-fala-de-representatividade-por-mais-glorias-tendo-espaco-25069327.html
+Santoni sobre namorado após cenas de sexo a três: 'Animado, não teve ciúme'   ------>  https://kogut.oglobo.globo.com/noticias-da-tv/noticia/2021/06/com-cenas-de-sexo-tres-em-serie-isabella-santoni-fala-sobre-reacao-do-namorado-ficou-animado-nao-teve-ciume.html
 Arthur Aguiar abre caixinha de perguntas e Sophia rouba a cena   ------>  https://revistamarieclaire.globo.com/Celebridades/noticia/2021/06/arthur-aguiar-abre-caixinha-de-perguntas-e-sophia-rouba-cena.html
 Astrologia   HORÓSCOPO   Sensíveis? Conheça os famosos do signo de câncer   ------>  https://gshow.globo.com/horoscopo-etc/stories/2021/06/20/conheca-os-famosos-do-signo-de-cancer.ghtml
 Ouça podcasts de entretenimento ›   ------>  https://gshow.globo.com/podcast/
@@ -212,12 +213,12 @@ Clássico das festas         Saiba como fazer paçoca, um dos doces mais tradici
 Com mel         Inove na canjica com doce de leite sem açúcar   ------>  https://revistacasaejardim.globo.com/Casa-e-Comida/Receitas/Doces/noticia/2021/06/receita-de-canjica-com-doce-de-leite-sem-acucar.html
 Salve-se Quem Puder         Helena é acusada de traição, mas beija Mário   ------>  https://gshow.globo.com/novelas/salve-se-quem-puder/noticia/resumo-de-salve-se-quem-puder-capitulos-de-28-de-junho-a-3-de-julho.ghtml
 No Limite         Confira momentos divertidos e inusitados do reality   ------>  https://gshow.globo.com/realities/no-limite/stories/2021/06/20/no-limite-confira-momentos-divertidos-ou-inusitados-do-reality.ghtml
-The Voice Kids         Técnicos relatam emoções na fase das Audições   ------>  https://gshow.globo.com/realities/the-voice-kids/2021/noticia/the-voice-kids-tecnicos-e-apresentadores-falam-sobre-as-emocoes-na-fase-das-audicoes.ghtml
+Famosos         Ex-BBB Thaís posta de biquíni, mas comenta sobre o frio   ------>  https://gshow.globo.com/Famosos/noticia/thais-do-bbb21-posta-foto-de-biquini-e-brinca-com-o-frio-hoje-volto-para-minhas-fotos-de-moletom.ghtml
 'Melhorou minha autoestima'         Maiara diz que se sente mais segura após terapia   ------>  https://gshow.globo.com/Famosos/noticia/maiara-diz-que-se-sente-mais-segura-apos-terapia-melhorou-minha-autoestima.ghtml
    ------>  https://globoplay.globo.com/
-GLOOB   Miraculous: as Aventuras de Ladybug é o sucesso da garotada! Convida a turma toda!   ------>  https://globoplay.globo.com/miraculous-as-aventuras-de-ladybug/t/DzVqV1jn8Q/
-MULTISHOW   Nova temporada de O Dono do Lar é risada garantida!   ------>  https://globoplay.globo.com/o-dono-do-lar/t/skwYXXfTH2/temporadas/4/
-sportv ao vivo   Acompanhe todos os jogos da Eurocopa no SporTV! Vem torcer!   ------>  https://globoplay.globo.com/sportv/ao-vivo/7339108/
+GNT   Bronze prepara costeleta de porco com bananada direto na brasa   ------>  https://globoplay.globo.com/v/9527340/programa/
+OFF   Após acidente, Craig DeMartino volta ao esporte e torna-se inspiração   ------>  https://globoplay.globo.com/craigs-reaction/t/MWSXscLRZq/
+Universal+   No escritório de NY do FBI, agentes resolvem casos envolvendo corrupção   ------>  https://globoplay.globo.com/fbi/t/zWtcvSmmcV/
 Lázaro invadiu fazenda, roubou queijo, carregador de celular, R$ 30 e fugiu, diz morador   ------>  https://g1.globo.com/go/goias/noticia/2021/06/19/lazaro-invadiu-fazenda-vizinha-roubou-queijo-carregador-de-celular-r-30-e-fugiu-diz-morador.ghtml
 Manifestantes fazem atos contra Bolsonaro e a favor da vacina em todos os estados e no DF   ------>  https://g1.globo.com/politica/noticia/2021/06/19/protestos-sabado.ghtml
 Donos de terreiros denunciam truculência de policiais durante buscas a Lázaro   ------>  https://g1.globo.com/df/distrito-federal/noticia/2021/06/19/lazaro-barbosa-representantes-de-terreiros-denunciam-truculencia-de-policiais-durante-buscas-no-entorno-do-df.ghtml
@@ -503,7 +504,7 @@ CBN   ------>  https://cbn.globoradio.globo.com/
 Rádio Globo   ------>  https://radioglobo.globo.com/
 trabalhe conosco   ------>  https://www.vempraglobo.com.br/
 conta globo   ------>  https://conta.globo.com/
-   ------>  https://www.globo.com/
+Globo.com   ------>  https://www.globo.com/
 Princípios editoriais   ------>  http://g1.globo.com/principios-editoriais-do-grupo-globo.html
 Política de privacidade   ------>  https://www.globo.com/privacidade.html
 Minha conta   ------>  https://minhaconta.globo.com/
