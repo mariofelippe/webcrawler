@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %} {{q}} {% endblock %}
+
+{% block head %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/busca.css' ) }}'>
+{% endblock %}
+{% block content %}
+
+
+<div class="form-row">
+    <div class="col-md-2"></div>
+
+    <div class="form-group col-md-6">
+        <form class="" action="" method="get">
+            <div class="form-group">
+                <input class="form-control search " type="text" placeholder="Digite aqui a URL para buscar as informações da página" name="q" value="{{q}}">
+
+            </div>
+
+        
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+
+</div>
+</div>
+
+
+    
+    
+
+<div class="container">
+
+<hr>
+
+<div class="row">
+  
+    
+    <div class="col-sm-8">
+        <h4>{{info['title']}}</h4>
+        <p>{{info['description'] }}</p>
+       
+       
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card" style="width: 20rem;">
+            {% for meta in metas['property'] %}
+                
+            {% if 'og:type' in meta %}
+
+            <div class="card-header">
+                {{meta['og:type']}}
+            </div>
+               
+            {% endif %}
+            
+        
+            {% endfor %}
+          
+            <div class="card-body">
+            {% for meta in metas['property'] %}
+                
+            {% if 'og:image' in meta %}
+               <img class="rounded mx-auto d-block" src="{{meta['og:image']}}" width="200" height="200" alt="Logo imagem" > 
+               
+            {% endif %}
+            
+        
+            {% endfor %}
+            
+                <hr>
+                
+               
+                
+              <h6 class="card-title">{{ info['site_name'] }}</h6>
+              <p class="card-text">{{ info['description'] }}</p>
+              <a href="#" class="card-link">{{ info['url'] }}</a>
+            </div>
+        </div>
+        </div>
+    
+   
+</div>
+
+
+
+<hr>
+<main role="main" class="container">
+
+{% for url in urls %}
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-body">
+          <a href='{{url['href']}}' ><h5>{{url['text']}}</h5></a> 
+          <p>{{url['href']}}</p>  
+        </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endfor %}
+{% endblock %}
+</main>

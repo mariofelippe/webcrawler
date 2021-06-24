@@ -12,7 +12,8 @@ def star_app():
             print('-t          Para iniciar o programa em modo terminal.\n')
         else:
             main.start_terminal()
-
+    else:
+        main.start_web()
 
 
 if __name__ == '__main__':

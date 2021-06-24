@@ -1,0 +1,46 @@
+html {
+    font-family: "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.principal {
+  margin-top: 200px;
+}
+
+
+
+
+.search {
+  border: 1px solid #dfe1e5;
+  border-radius: 50px;
+  background-color: transparent;
+  height: 45px;
+  font-size: 16px;
+  margin-top: 1.5rem;
+  
+    
+}
+
+main input[type="text"]:focus{
+  outline: none;
+}
+
+.pesquisar {
+
+  background-color: #f8f9fa;
+  margin: 1rem;
+  border: 1px solid #dfe1e5;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+
+}
+
+
+
