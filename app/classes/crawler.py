@@ -86,10 +86,13 @@ class Crawler():
                 if self.__href.split(':')[0] not in ['http','https']:
                     self.__href = f'{self.get_dominio()}{self.__href}'
                 self.trata_url(self.__href)
+                
                 if text:
-                    lista_urls.append({'text':self.__text,'href':self.__href})
+                    if {'text':self.__text,'href':self.__href} not in lista_urls: # Trata possíveis duplicitadades
+                        lista_urls.append({'text':self.__text,'href':self.__href})
                 else:
-                    lista_urls.append(self.__href)
+                    if self.__href not in lista_urls:
+                        lista_urls.append(self.__href)
             
             return lista_urls
         
@@ -214,4 +217,62 @@ class Crawler():
                   
         return(info)
         
-
+        
+    def get_titles_page(self) -> list:
+        """
+        Pega as tags de título da página.
+        Returns:
+            [list]: Lista de títulos da página.
+        """
+        
+        lista_titulo = []
+        
+        for i in range(1,7):                   
+            self.__h = self.__html.find_all(f'h{i}')          
+                    
+            for tag in self.__h:                
+                lista_titulo.append(tag.get_text().strip())
+               
+        return lista_titulo
+    
+    
+    def get_images_page(self):
+        """ Pega o text e a url das imagens da página.
+        Returns:
+            [list]: Lista informações referente as imagens encontradas.
+        """
+               
+        lista_images = []
+        controle = []
+        self.__images = self.__html.find_all('img')
+        
+               
+        for img in self.__images:
+            url_img = self.ajusta_url(img.get('src'))
+            
+            alt_img = img.get('alt')
+            if alt_img not in controle:
+                if alt_img:
+                    controle.append(alt_img)
+                    lista_images.append({'text':alt_img,'url':url_img})
+        
+        self.__images = self.__html.find_all('amp-img')
+        
+        for img in self.__images:
+            url_img = self.ajusta_url(img.get('src'))
+            alt_img = img.get('title')
+            if alt_img not in controle:
+                if alt_img:
+                    controle.append(alt_img)
+                    lista_images.append({'text':alt_img,'url':url_img})
+                
+        return lista_images
+    
+    
+    def ajusta_url(self,url) -> str:
+                
+        if url.split(':')[0] not in ['http','https']:
+            print(f'{self.get_dominio()}{url}')
+            return f'{self.get_dominio()}{url}'
+        
+        return url
