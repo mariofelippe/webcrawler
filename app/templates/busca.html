@@ -40,8 +40,34 @@
     <div class="col-sm-8">
         <h4>{{info['title']}}</h4>
         <p>{{info['description'] }}</p>
+   
+        <nav class="nav nav-pills flex-column flex-sm-row ">
+            <div class="row">
+        {% if nav %}
+        {% for i in range(12)%}
+        
+        {% if i < nav | length %}
+        
        
-       
+        <div class="col-sm-4">
+        <li class="nav-item">
+        
+         {% for url in urls%} 
+            {%- if url['text'] == nav[i]%} 
+        <a class="nav-link" href=""><h5>{{nav[i]}}</h5></a>             
+            {% endif %}
+           {%- endfor %}
+          
+        </li>
+        </div>
+        
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        <div class="col-sm-4"></div>
+    </div>
+        </nav>
+
     </div>
 
     <div class="col-sm-4">
@@ -89,13 +115,19 @@
 <hr>
 <main role="main" class="container">
 
+{%if urls%} 
 {% for url in urls %}
-
+{% if url['text'] != '' and url['text'] not in nav%}
 <div class="row">
     <div class="col-sm-8">
         <div class="card">
+            {% for img in images %}
+            {% if img['href'] == url['href']%}
+            <img class="rounded mx-auto d-block" src="{{img['url_image']}}" alt="{{img['text']}}" > 
+            {% endif %}
+            {% endfor %}
             <div class="card-body">
-          <a href='{{url['href']}}' ><h5>{{url['text']}}</h5></a> 
+          <a href="{{url['href']}}" ><h5>{{url['text']}}</h5></a> 
           <p>{{url['href']}}</p>  
         </div>
         </div>
@@ -103,6 +135,9 @@
     
 </div>
 
+{% endif %}
+
 {% endfor %}
+{%endif%}
 {% endblock %}
 </main>

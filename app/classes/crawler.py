@@ -6,8 +6,8 @@ class Crawler():
     
     def __init__(self):
         
-        self.__headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"}
-    
+        self.__headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"}
+  
     def get_page(self,url):
         """
         Faz a requisição para a URL específica.
@@ -19,7 +19,7 @@ class Crawler():
         self.__url = self.trata_url(url)
         
         try:
-            self.__req = requests.get(self.__url,headers=self.__headers)
+            self.__req = requests.get(self.__url,headers=self.__headers,timeout=20)
             self.__format_html()
         except Exception as erro:
             print(f'Erro ao tentar conectar \"{self.__url}\"! {erro}')
@@ -60,7 +60,7 @@ class Crawler():
         try:
             self.__urls = self.__html.find_all('a')
             lista_urls = []
-            
+            controle = []
             
             
             for url in self.__urls:
@@ -78,6 +78,10 @@ class Crawler():
                         self.__text = self.__title
                     else:
                         self.__text = ''
+                
+                # Remove espaços
+                self.__text = self.remove_espacos(self.__text)
+                
                 # Limpa os parametros passados pela url caso limpa_parametros=True.
                 if limpa_parametros:
                     self.__href = self.__href.split('?')[0]
@@ -88,12 +92,13 @@ class Crawler():
                 self.trata_url(self.__href)
                 
                 if text:
-                    if {'text':self.__text,'href':self.__href} not in lista_urls: # Trata possíveis duplicitadades
+                    if self.__text not in controle: # Trata possíveis duplicitadades
                         lista_urls.append({'text':self.__text,'href':self.__href})
+                        controle.append(self.__text)
                 else:
                     if self.__href not in lista_urls:
                         lista_urls.append(self.__href)
-            
+            print(lista_urls)
             return lista_urls
         
         except Exception as erro:
@@ -228,12 +233,12 @@ class Crawler():
         lista_titulo = []
         
         for i in range(1,7):                   
-            self.__h = self.__html.find_all(f'h{i}')          
-                    
+            self.__h = self.__html.find_all(f'h{i}')
             for tag in self.__h:                
                 lista_titulo.append(tag.get_text().strip())
                
         return lista_titulo
+
     
     
     def get_images_page(self):
@@ -270,9 +275,123 @@ class Crawler():
     
     
     def ajusta_url(self,url) -> str:
+        
+        if url == None:
+            return ''
                 
         if url.split(':')[0] not in ['http','https']:
             print(f'{self.get_dominio()}{url}')
             return f'{self.get_dominio()}{url}'
         
         return url
+    
+    def get_nav_page(self, url=False):
+        
+                
+        self.__lista_nav = []
+        self.__controle = []
+        self.__nav = self.__html.nav
+        if self.__nav == None or self.__nav == '':
+            return 
+        self.__urls = self.__nav.find_all('a')
+        
+       
+        for url in self.__urls:
+            
+            self.__url = url.get('href')
+            self.__text = url.get_text().strip()
+            self.__title = url.get('title')
+            
+            if self.__text in self.__controle:
+                continue
+            
+            if self.__text == None or self.__text == '':
+                
+                self.__text = self.__title
+                
+                if self.__text == None or self.__text == '':
+                    continue
+            
+            self.__controle.append(self.__text) 
+            if url == True:          
+                self.__lista_nav.append({'title':self.__text, 'url':self.__url})
+            else:
+                 self.__lista_nav.append(self.__text)
+        # Realiza o processo para a tag header.
+            
+        self.__nav = self.__html.header
+        self.__urls = self.__nav.find_all('a')
+        
+       
+        for url in self.__urls:
+            
+            self.__url = url.get('href')
+            self.__text = url.get_text().strip()
+            self.__title = url.get('title')
+            
+            if self.__text in self.__controle:
+                continue
+            
+            if self.__text == None or self.__text == '':
+                
+                self.__text = self.__title
+                
+                if self.__text == None or self.__text == '':
+                    continue
+            
+            self.__controle.append(self.__text)           
+            if url == True:          
+                self.__lista_nav.append({'title':self.__text, 'url':self.__url})
+            else:
+                 self.__lista_nav.append(self.__text)
+        
+        return self.__lista_nav
+            
+    def get_img_urls(self):
+        
+        self.__lista_images = []
+        self.__controle = []
+        self.__a = self.__html.find_all('a')
+        
+        for item in self.__a:
+            href = item.get('href')
+            tag_amp_img = item.find('amp-img')
+            tag_img = item.find('img')
+            text = item.get_text().strip()            
+            
+                  
+            if tag_amp_img:                              
+                url_image = tag_amp_img.get('src')
+                alt = tag_amp_img.get('alt')
+                text = self.remove_espacos(text)
+                
+                self.__lista_images.append({'href':href, 
+                                            'url_image':url_image,
+                                            'text': text,
+                                            'alt':alt})
+
+            if tag_img:                              
+                url_image = tag_img.get('src')
+                alt = tag_img.get('alt')
+                text = self.remove_espacos(text)
+                
+                self.__lista_images.append({'href':href, 
+                                            'url_image':url_image,
+                                            'text': text,
+                                            'alt':alt})
+        return self.__lista_images
+        
+        
+       
+    def remove_espacos(self,text) -> str:
+        """
+        Remove os excessos de espacos em textos dentro de tags.
+        """
+        regra = '\s{2,}'
+        if text:
+            espaco = re.search(regra, str(text))
+            if espaco:
+                espaco = espaco.group()
+                text = text.replace(espaco, ' | ')
+        
+        return text
