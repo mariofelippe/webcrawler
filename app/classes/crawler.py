@@ -69,7 +69,26 @@ class Crawler():
                 self.__href = url.get('href')
                 self.__text = url.get_text().strip()
                 self.__title = url.get('title')
+                self.__span = url.span
+                self.__amp_img = url.find('amp-img')
+                self.__img = url.find('img')
                 
+                # Inicializa as variavies img
+                
+                self.__url_image = ''
+                self.__alt_image = ''
+                
+                if self.__amp_img:
+                    self.__url_image = self.__amp_img.get('src')
+                    self.__alt_image = self.__amp_img.get('alt')
+                
+                if self.__img:
+                    self.__url_image = self.__img.get('src')
+                    self.__alt_image = self.__img.get('alt')
+                
+                if self.__alt_image == None:
+                    self.__alt_image = ''
+                                
                 if self.__href == None:
                    continue
                
@@ -78,6 +97,14 @@ class Crawler():
                         self.__text = self.__title
                     else:
                         self.__text = ''
+                
+                if self.__span != None:
+                    if self.__text != self.__span.get_text().strip():
+                        self.__span = self.__span.get_text().strip()
+                    else:
+                        self.__span = ''
+                else:
+                    self.__span = ''
                 
                 # Remove espaços
                 self.__text = self.remove_espacos(self.__text)
@@ -93,12 +120,17 @@ class Crawler():
                 
                 if text:
                     if self.__text not in controle: # Trata possíveis duplicitadades
-                        lista_urls.append({'text':self.__text,'href':self.__href})
+                        lista_urls.append({'text': self.__text,
+                                           'span': self.__span,
+                                           'href': self.__href,
+                                           'url_image': self.__url_image,
+                                           'alt_image': self.__alt_image                                           
+                                           })
                         controle.append(self.__text)
                 else:
                     if self.__href not in lista_urls:
                         lista_urls.append(self.__href)
-            print(lista_urls)
+           
             return lista_urls
         
         except Exception as erro:
@@ -239,8 +271,7 @@ class Crawler():
                
         return lista_titulo
 
-    
-    
+        
     def get_images_page(self):
         """ Pega o text e a url das imagens da página.
         Returns:
@@ -291,8 +322,9 @@ class Crawler():
         self.__lista_nav = []
         self.__controle = []
         self.__nav = self.__html.nav
+      
         if self.__nav == None or self.__nav == '':
-            return 
+            self.__nav = self.__html.header
         self.__urls = self.__nav.find_all('a')
         
        
@@ -380,9 +412,7 @@ class Crawler():
                                             'text': text,
                                             'alt':alt})
         return self.__lista_images
-        
-        
-       
+             
     def remove_espacos(self,text) -> str:
         """
         Remove os excessos de espacos em textos dentro de tags.

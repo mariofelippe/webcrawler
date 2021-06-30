@@ -114,19 +114,44 @@
 
 <hr>
 <main role="main" class="container">
+  
+ 
+    <div class="card-columns">
+      
+
+   {% for url in urls %}
+   {% if url['url_image']%}
+      {% if url['text'] and url['text'] not in nav%}
+        
+        <div class="card" style="width: 18rem;">
+          <a href="{{url['href']}}">
+            {% if url['url_image']%}
+            <img class="card-img-top" src="{{url['url_image']}}" alt="{{url['alt_image']}}">
+            {% endif %}
+            <div class="card-body">
+              {% if url['span'] %}
+              <h6 class="card-title">{{url['span']}}</h6>
+              {% endif %}
+              <p class="card-text">{{url['text']}}</p>
+            </div>
+          </div>
+        </a>
+        
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+ 
+  </div>
+
 
 {%if urls%} 
 {% for url in urls %}
-{% if url['text'] != '' and url['text'] not in nav%}
+{% if url['text'] != ''%}
 <div class="row">
     <div class="col-sm-8">
         <div class="card">
-            {% for img in images %}
-            {% if img['href'] == url['href']%}
-            <img class="rounded mx-auto d-block" src="{{img['url_image']}}" alt="{{img['text']}}" > 
-            {% endif %}
-            {% endfor %}
             <div class="card-body">
+              <h6 class="card-title">{{url['span']}}</h6>
           <a href="{{url['href']}}" ><h5>{{url['text']}}</h5></a> 
           <p>{{url['href']}}</p>  
         </div>
