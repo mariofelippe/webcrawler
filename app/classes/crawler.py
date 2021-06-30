@@ -335,8 +335,13 @@ class Crawler():
       
         if self.__nav == None or self.__nav == '':
             self.__nav = self.__html.header
+        
+        if not self.__nav:
+            return 
+        
         self.__urls = self.__nav.find_all('a')
         
+      
        
         for url in self.__urls:
             
