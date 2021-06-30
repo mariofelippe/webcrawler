@@ -14,7 +14,9 @@ def index():
         param = request.args.get('param')
         if q:            
            
-            cr.get_page(q)
+            retorno = cr.get_page(q)
+            if not retorno:
+                return render_template('index.html')
             info = cr.get_info()
             urls = cr.get_urls(text=True, limpa_parametros=param)
             metas = cr.get_meta()

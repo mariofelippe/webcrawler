@@ -118,7 +118,7 @@
  
     <div class="card-columns">
       
-
+    {% if urls %}
    {% for url in urls %}
    {% if url['url_image']%}
       {% if url['text'] and url['text'] not in nav%}
@@ -140,7 +140,7 @@
         {% endif %}
         {% endif %}
     {% endfor %}
- 
+ {% endif %}
   </div>
 
 

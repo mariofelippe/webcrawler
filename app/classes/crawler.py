@@ -8,12 +8,14 @@ class Crawler():
         
         self.__headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"}
   
-    def get_page(self,url):
-        """
-        Faz a requisição para a URL específica.
+    def get_page(self,url) -> bool:
+        """ Faz a requisição para a URL específica.
 
         Args:
             url ([str]): URL da página a ser verificada.
+
+        Returns:
+            [bool]: True se a requisição for com sucesso e False se houve erro.
         """
                        
         self.__url = self.trata_url(url)
@@ -21,9 +23,11 @@ class Crawler():
         try:
             self.__req = requests.get(self.__url,headers=self.__headers,timeout=20)
             self.__format_html()
+            return True
         except Exception as erro:
             print(f'Erro ao tentar conectar \"{self.__url}\"! {erro}')
             self.__html = ''
+            return False
             
             
 
@@ -262,6 +266,10 @@ class Crawler():
             [list]: Lista de títulos da página.
         """
         
+        # Verifica se o html foi retornado e caso não não faça nada.
+        if not self.__html:
+            return
+        
         lista_titulo = []
         
         for i in range(1,7):                   
@@ -318,6 +326,8 @@ class Crawler():
     
     def get_nav_page(self, url=False):
         
+        if not self.__html:
+            return
                 
         self.__lista_nav = []
         self.__controle = []
