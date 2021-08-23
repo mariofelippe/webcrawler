@@ -16,6 +16,6 @@ O projeto deve possuir alguns requisitos na implementação com o objeto de apli
 - [X] Utilizar o GIT e Github para controle do cógido.
 - [X] Possuir um menu no terminal.
 - [ ] Possuir uma API.
-- [ ] Possuir um Front-End Web.
-- [ ] Utilizar Expressões regulares no projeto.
+- [X] Possuir um Front-End Web.
+- [X] Utilizar Expressões regulares no projeto.
 - [X] Trabalhar com manipulação de arquivo.
