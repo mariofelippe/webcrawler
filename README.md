@@ -19,3 +19,20 @@ O projeto deve possuir alguns requisitos na implementação com o objeto de apli
 - [X] Possuir um Front-End Web.
 - [X] Utilizar Expressões regulares no projeto.
 - [X] Trabalhar com manipulação de arquivo.
+
+# Utilização
+
+1. Instalando as bibliotecas utilizadas.
+
+    `pip freeze -r requirements.txt`
+
+2. Executando em modo terminal.
+
+    `python run.py -t`
+
+3. Execução sevidor web local.
+
+    `python run.py`
+
+
+
