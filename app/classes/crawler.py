@@ -244,7 +244,13 @@ class Crawler():
                        
             if 'description' in dado.keys():
                 info['description'] = dado['description']
-                    
+                
+            if 'viewport' in dado.keys():
+                info['viewport'] = dado['viewport']
+                
+            if 'theme-color' in dado.keys():
+                info['theme-color'] = dado['theme-color']    
+                   
         for dado in data['property']:
             
             if 'og:title' in dado.keys():
@@ -255,7 +261,19 @@ class Crawler():
             
             if 'og:url' in dado.keys():
                 info['url'] = dado['og:url']
-                  
+                
+            if 'og:locale' in dado.keys():
+                info['locale'] = dado['og:locale']
+                
+            if 'og:type' in dado.keys():
+                info['type'] = dado['og:type']
+                
+            if 'og:image' in dado.keys():
+                info['image'] = dado['og:image']
+        
+        if data['charset']:
+            info['charset'] = data['charset']
+        
         return(info)
         
         
