@@ -23,7 +23,7 @@ def info(url=None):
             response = {'url_request': url, 'info': info}
             status = 200
         else:
-            response = 'A URL {} informada é inválida!'.format(q)
+            response = 'A URL {} informada é inválida!'.format(url)
             status = 400
     else:
         response = {'Consulta informação da url':'/info/(url)'}
@@ -58,10 +58,21 @@ def links(url=None, text=False):
     return jsonify(response), status
 
 
-
+@bp.route('/images/')
 @bp.route('/images/<url>')
-def images(url):
+def images(url=None):
     
-    response = {'ola':'mundo'}
-    status = 200
+    if url:
+        if cr.get_page(url):
+            info = cr.get_info()
+            images = cr.get_images_page()
+            response = {'url_request': url, 'info': info, 'images': images}
+            status = 200
+        else:
+            response = 'A URL {} informada é inválida!'.format(url)
+            status = 400
+    else:
+        response = {'Consulta imagens da url':'/images/(url)'}
+        status = 200
+        
     return jsonify(response), status
