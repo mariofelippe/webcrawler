@@ -43,16 +43,16 @@ O parâmetro "URL" é informado pelo usuário e o sistema retorna algumas inform
 
 1. Consultar informações da URL.
 ```
-GET http://localhost/api/info/(url)
+GET http://localhost:5000/api/info/(url)
 ```
 2. Retornando as URLs da página.
 ```
-GET http://localhost/api/links/(url)
+GET http://localhost:5000/api/links/(url)
 ```
 3. Retornando as URLs da página com mais informações.
 ```
-GET http://localhost/api/links/(url)/text
+GET http://localhost:5000/api/links/(url)/text
 ```
 4. Retornando as imagens da página.
 ```
-GET http://localhost/api/images/(url)
+GET http://localhost:5000/api/images/(url)
