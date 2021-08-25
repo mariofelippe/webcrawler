@@ -310,23 +310,32 @@ class Crawler():
         
                
         for img in self.__images:
-            url_img = self.ajusta_url(img.get('src'))
-            
+            url_img = img.get('src')
+            if ';' in url_img:
+                url_img = img.get('data-src')
+            url_img =  self.ajusta_url(url_img)
+            width = img.get('width')
+            height = img.get('height')
             alt_img = img.get('alt')
             if alt_img not in controle:
                 if alt_img:
                     controle.append(alt_img)
-                    lista_images.append({'text':alt_img,'url':url_img})
+                    lista_images.append({'text': alt_img,'url': url_img, 'alt':alt_img, 'width':width, 'height':height})
         
         self.__images = self.__html.find_all('amp-img')
         
         for img in self.__images:
-            url_img = self.ajusta_url(img.get('src'))
+            url_img = img.get('src')
+            if ';' in url_img:
+                url_img = img.get('data-src')
+            url_img =  self.ajusta_url(url_img)
+            width = img.get('width')
+            height = img.get('height')
             alt_img = img.get('title')
             if alt_img not in controle:
                 if alt_img:
                     controle.append(alt_img)
-                    lista_images.append({'text':alt_img,'url':url_img})
+                    lista_images.append({'text': alt_img,'url': url_img, 'alt':alt_img, 'width':width, 'height':height})
                 
         return lista_images
     
