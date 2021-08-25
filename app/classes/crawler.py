@@ -299,7 +299,7 @@ class Crawler():
 
         
     def get_images_page(self):
-        """ Pega o text e a url das imagens da página.
+        """ Pega informações sobre as imagens da página.
         Returns:
             [list]: Lista informações referente as imagens encontradas.
         """
@@ -311,11 +311,19 @@ class Crawler():
                
         for img in self.__images:
             url_img = img.get('src')
+            if url_img == None:
+                continue
             if ';' in url_img:
                 url_img = img.get('data-src')
             url_img =  self.ajusta_url(url_img)
             width = img.get('width')
             height = img.get('height')
+            try:
+                width = int(width)
+                height = int(height)
+            except:
+                pass
+            
             alt_img = img.get('alt')
             if alt_img not in controle:
                 if alt_img:
@@ -326,11 +334,18 @@ class Crawler():
         
         for img in self.__images:
             url_img = img.get('src')
+            if url_img == None:
+                continue
             if ';' in url_img:
                 url_img = img.get('data-src')
             url_img =  self.ajusta_url(url_img)
             width = img.get('width')
             height = img.get('height')
+            try:
+                width = int(width)
+                height = int(height)
+            except:
+                pass
             alt_img = img.get('title')
             if alt_img not in controle:
                 if alt_img:
