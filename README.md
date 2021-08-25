@@ -24,7 +24,7 @@ O projeto deve possuir alguns requisitos na implementação com o objeto de apli
 
 1. Instalando as bibliotecas utilizadas.
 
-    `pip freeze -r requirements.txt`
+    `pip install -r requirements.txt`
 
 2. Executando em modo terminal.
 
@@ -53,3 +53,6 @@ GET http://localhost/api/links/(url)
 ```
 GET http://localhost/api/links/(url)/text
 ```
+4. Retornando as imagens da página.
+```
+GET http://localhost/api/images/(url)
